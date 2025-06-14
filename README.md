@@ -1,5 +1,6 @@
 ﻿# CourseWork
 1. OLTP Database Schema (3NF)
+```
 ┌─────────────────┐
 │   Categories    │
 ├─────────────────┤
@@ -70,3 +71,64 @@
 └─────────────────┘                          │
                                              │
                                 Products ────┘
+```
+2. OLAP Database Schema (Snowflake)
+```
+                    ┌─────────────────────┐
+                    │     Dim_Date        │
+                    ├─────────────────────┤
+                    │ PK date_key         │
+                    │    date             │
+                    │    year             │
+                    │    quarter          │
+                    │    month            │
+                    │    month_name       │
+                    │    week             │
+                    │    day_of_week      │
+                    │    day_name         │
+                    │    is_weekend       │
+                    └─────────────────────┘
+                              ▲
+                              │
+┌────────────────────┐        │        ┌────────────────────────┐
+│   Dim_Customer     │        │        │      Fact_Sales        │
+│   (SCD Type 2)     │        │        ├────────────────────────┤
+├────────────────────┤        │        │ PK sales_key           │
+│ PK customer_key    │◄───────┼────────│ FK date_key            │
+│    customer_id     │        │        │ FK customer_key        │
+│    email           │        │        │ FK product_key         │
+│    first_name      │        │        │ FK location_key        │
+│    last_name       │        │        │    quantity_sold       │
+│    city            │        │        │    unit_price          │
+│    country         │        │        │    total_amount        │
+│    customer_segment│        │        │    discount_amount     │
+│    start_date      │        │        └────────────────────────┘
+│    end_date        │        │                    │
+│    is_current      │        │                    │
+└────────────────────┘        │                    │
+                              │                    ▼
+┌────────────────────┐        │        ┌────────────────────────┐
+│   Dim_Product      │        │        │    Fact_Inventory      │
+├────────────────────┤        │        ├────────────────────────┤
+│ PK product_key     │◄───────┼────────│ PK inventory_key       │
+│    product_id      │        │        │ FK date_key            │
+│    product_name    │        │        │ FK product_key         │
+│    category        │        │        │ FK location_key        │
+│    subcategory     │        │        │    quantity_on_hand    │
+│    brand           │        │        │    quantity_available  │
+│    price_range     │        │        │    reorder_point       │
+└────────────────────┘        │        │    days_in_stock       │
+         ▲                    │        └────────────────────────┘
+         │                    │                    │
+         │                    │                    ▼
+         │           ┌────────┴────────┐  ┌──────────────────┐
+         │           │  Dim_Location   │  │ Bridge_Product_  │
+         │           ├─────────────────┤  │    Category      │
+         │           │ PK location_key │  ├──────────────────┤
+         │           │    country      │  │ PK bridge_key    │
+         │           │    region       │  │ FK product_key   │
+         │           │    city         │  │    category_     │
+         │           └─────────────────┘  │    group_key     │
+         │                                │    weight        │
+         └────────────────────────────────└──────────────────┘
+```

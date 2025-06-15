@@ -1,0 +1,11 @@
+customer_email,product_name,quantity,unit_price,order_date,shipping_address,order_status,payment_method,total_amount
+john.doe@email.com,DeathAdder V3,1,149.99,2025-06-07 18:49:23,"Some Street, New York",Delivered,Cash,326.78
+john.doe@email.com,iPhone 15 Clear Case,3,49.99,2025-06-07 18:49:23,"Some Street, New York",Delivered,Cash,326.78
+john.doe@email.com,Smart Plug Mini,2,24.99,2025-06-07 18:49:23,"Some Street, New York",Delivered,Cash,326.78
+jane.smith@email.com,WH-1000XM5,2,399.99,2025-06-07 18:49:23,"Some Street, Los Angeles",Shipped,Cash,382.58
+bob.johnson@email.com,Smart Plug Mini,2,24.99,2025-06-13 18:49:23,"Some Street, Chicago",Delivered,Card,137.89
+bob.johnson@email.com,DeathAdder V3,3,149.99,2025-06-13 18:49:23,"Some Street, Chicago",Delivered,Card,137.89
+alice.williams@email.com,Galaxy S23 Screen Protector,1,19.99,2025-06-08 18:49:23,"Some Street, Houston",Pending,Card,474.29
+alice.williams@email.com,Stream Deck,3,149.99,2025-06-08 18:49:23,"Some Street, Houston",Pending,Card,474.29
+charlie.brown@email.com,PowerCore 20000,2,39.99,2025-06-05 18:49:23,"Some Street, Phoenix",Pending,Card,492.51
+charlie.brown@email.com,Galaxy Buds2 Pro,3,229.99,2025-06-05 18:49:23,"Some Street, Phoenix",Pending,Card,492.51

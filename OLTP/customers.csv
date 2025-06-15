@@ -1,0 +1,6 @@
+email,first_name,last_name,phone,address,city,country,postal_code
+john.doe@email.com,John,Doe,555-0101,123 Main St,New York,USA,10001
+jane.smith@email.com,Jane,Smith,555-0102,456 Oak Ave,Los Angeles,USA,90001
+bob.johnson@email.com,Bob,Johnson,555-0103,789 Pine Rd,Chicago,USA,60601
+alice.williams@email.com,Alice,Williams,555-0104,321 Elm St,Houston,USA,77001
+charlie.brown@email.com,Charlie,Brown,555-0105,654 Maple Dr,Phoenix,USA,85001

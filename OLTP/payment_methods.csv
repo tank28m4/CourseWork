@@ -1,0 +1,5 @@
+method_name,description
+Cash,Оплата наличными
+Credit Card,Оплата кредитной картой
+PayPal,Оплата через PayPal
+Bank Transfer,Банковский перевод
